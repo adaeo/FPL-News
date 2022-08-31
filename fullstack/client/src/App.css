@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Simple browser reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  height: 100%;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+#root,
+.App {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.prevContainer {
+  flex: 1;
+  text-align: center;
+  background-color: #f87979;
+  cursor: pointer;
+}
+
+.titleContainer {
+  flex: 8;
+  text-align: center;
+  background-color: #6babff;
+}
+
+.nextContainer {
+  flex: 1;
+  text-align: center;
+  background-color: #83f879;
+  cursor: pointer;
+}
+
+.sectionContainerRow {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionContainerCol {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.columnContainer {
+  flex: 1;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.mainContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.halfContainer {
+  flex: 1;
+  min-height: min-content;
+  overflow-y: auto;
+}
+
+.center {
+  margin: auto;
+  align-content: center;
+  text-align: center;
+}
+
+.responsiveImg {
+  width: 70%;
+  height: auto;
+}
+
+.left {
+  background-color: #F4F7F5;
+}
+
+.right {
+  background-color: #e2e0e0;
+}
