@@ -21,7 +21,7 @@ export default function RightColumn(props) {
 
     async function getData() {
       try {
-        const res = await fetch(`/api/player/${gameweek}`);
+        const res = await fetch(`/player/${gameweek}`);
         if (res.status !== 200) {
           throw new Error("Status was not ok!");
         }
@@ -46,18 +46,6 @@ export default function RightColumn(props) {
         <div className="sectionContainerRow">
           <h1 className="center">Player of the Week</h1>
           <h2 className="center">{playerData.name}</h2>
-        </div>
-        <hr></hr>
-        <div className="sectionContainerRow">
-          {playerStatImage && (
-            <>
-              <h4>{playerData.name}'s Performance Compared to all Players</h4>
-              <Image
-                className="center responsiveImg"
-                src={`data:image/jpeg;base64,${playerStatImage}`}
-              />
-            </>
-          )}
         </div>
         <hr></hr>
         <div className="sectionContainerCol">
@@ -97,6 +85,18 @@ export default function RightColumn(props) {
               </>
             )}
           </div>
+        </div>
+        <hr></hr>
+        <div className="sectionContainerRow">
+          {playerStatImage && (
+            <>
+              <h4>{playerData.name}'s Performance Compared to all Players</h4>
+              <Image
+                className="center responsiveImg"
+                src={`data:image/jpeg;base64,${playerStatImage}`}
+              />
+            </>
+          )}
         </div>
         <hr></hr>
       </div>

@@ -16,7 +16,7 @@ export default function LeftColumn(props) {
 
     // GET NEW DATA
     async function getData() {
-      const res = await fetch(`/api/gameweek/${gameweek}`);
+      const res = await fetch(`/gameweek/${gameweek}`);
       const data = await res.json();
 
       setFixtureData(data);

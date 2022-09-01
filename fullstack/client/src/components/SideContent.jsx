@@ -16,7 +16,7 @@ export default function LeftColumn(props) {
 
     // GET NEW DATA
     async function getData() {
-      const res = await fetch(`/api/news/?query=${fixture}`);
+      const res = await fetch(`/news/?query=${fixture}`);
       const data = await res.json();
       console.log(data);
 
