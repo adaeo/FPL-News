@@ -4,7 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var apiRouter = require('./routes/api');
+var playerRouter = require('./routes/player');
+var newsRouter = require('./routes/news');
+var gameweekRouter = require('./routes/gameweek');
 
 var app = express();
 
@@ -18,7 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', apiRouter);
+app.use('/player', playerRouter);
+app.use('/news', newsRouter);
+app.use('/gameweek', gameweekRouter);
 
 // Serve out any static assets correctly
 app.use(express.static('../client/build'))
