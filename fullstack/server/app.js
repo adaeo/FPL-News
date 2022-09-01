@@ -7,6 +7,7 @@ var logger = require('morgan');
 var playerRouter = require('./routes/player');
 var newsRouter = require('./routes/news');
 var gameweekRouter = require('./routes/gameweek');
+var counterRouter = require('./routes/counter');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/player', playerRouter);
 app.use('/news', newsRouter);
 app.use('/gameweek', gameweekRouter);
+app.use('/counter', counterRouter);
 
 // Serve out any static assets correctly
 app.use(express.static('../client/build'))

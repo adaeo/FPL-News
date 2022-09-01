@@ -47,6 +47,12 @@ body {
   background-color: #6babff;
 }
 
+.countContainer {
+  flex-shrink: 1;
+  text-align: center;
+  background-color: #ffc46b;
+}
+
 .nextContainer {
   flex: 1;
   text-align: center;
