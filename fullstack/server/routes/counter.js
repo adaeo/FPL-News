@@ -1,13 +1,20 @@
 var express = require("express");
 var router = express.Router();
+require("dotenv").config();
 const AWS = require("aws-sdk");
 
 AWS.config.update({
-  accessKeyId: "ASIA5DYSEEJ4WYYACP7P",
-  secretAccessKey: "RNgI0kBGtexQyUDuecSVXDPVKblY2cnH33wMRYFs",
-  sessionToken: "IQoJb3JpZ2luX2VjEOr//////////wEaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAOAkd4/C3Vas3QI8cDG9yjWpJ906v4IAJipH4rvBDqjXAiAR3x8LzXrzvniIrS3RWHvvas/Fk0aHH44ze5tLAkNm/yqvAwhzEAIaDDkwMTQ0NDI4MDk1MyIMms8O2RaqVxSqlH0SKowDBY/L58prKt5NaJlo0ZEE7GKXYqcbFbeXg/8REN7fY+pc+E4+GSQRW7ekcaeo75kDHiNWbaskydLjFGgibeEHYKYy4PEEtklwZaXckSVO3AkVWbUsJdjT/WyFuM5z1x7Jk9SgBw+LSF9uKGNiHlKtb3dvSclI7hkqF3+S5oz38FXfR/x6HxxtIP3SxF/lOGcVIw7juDBQ8wKu+7TlNT2VdhQiqXWW3+lLcljYVGM5xSwZ9A+w0BK0IGEkst8plNjfPwbwcRvyyocwmZ+u+7EtgmFJ6VU9Rj8PJYdfk6yC1+1eJZNzbT+EBfOFssZ5iqEHSvtEa1sFOL3hZLYmma62HksD8d6x0y+hd7KNFc4vL1Ow+GP4GdLFyFyPSAvcyVqYKbKAQU3XMHYWug+P4UxAlV2kdAiaYAJE75UJY/zCFysmIeW8FVSrrfvIsc1OnOFxofi5MbEtDuK5AIQwPewbb/t4VaPHVe3wLGC5GNjMZs/9xDAhA2ZS3oEPe9eg5i7uYfNFYKXK3I/JBeN7MLaGwpgGOqYB/5p0pApwwyTcBqY5Fzf7xRnb2nQ86bODSS5MGDkLNcb41RniQPvra8XVUzAJEp1W7vVr7xeLOqA0mV8snYCvksHxEpTbGe0M9eSH3BHZTaIsORk3kY17vFnrbBnZQrQNpcTL/oFD3yc5NJgQaOPuvJJIHope45JXcJXvHFJKFwaZmuwuEacc920mtt3s73KN9h1KTkXocG/lDEcdUv2lQXU5luFxzg==",
-  region: "ap-southeast-2",
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  sessionToken: process.env.AWS_SESSION_TOKEN,
+  region: process.env.AWS_REGION,
 });
+
+console.log("\nLoading with ENV variables:")
+console.log("\nACCESS_KEY_ID: " + process.env.AWS_ACCESS_KEY_ID);
+console.log("\nSECRET_ACCESS_KEY: " + process.env.AWS_SECRET_ACCESS_KEY);
+console.log("\nSESSION_TOKEN: " + process.env.AWS_SESSION_TOKEN);
+console.log("\nREGION: " + process.env.AWS_REGION + "\n");
 
 // Cloud Services Set-up
 // Create unique bucket name

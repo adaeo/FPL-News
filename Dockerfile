@@ -27,6 +27,15 @@ wget
 # Copy project folder
 COPY /fullstack /fullstack
 
+# Set dir to server routes
+WORKDIR /fullstack/server/routes
+
+# Set ENV variables
+ENV AWS_ACCESS_KEY_ID no_id
+ENV AWS_SECRET_ACCESS_KEY no_secret
+ENV AWS_SESSION_TOKEN no_token
+ENV AWS_REGION ap-southeast-2
+
 # Set dir to project folder
 WORKDIR /fullstack
 
