@@ -15,6 +15,7 @@ console.log("\nACCESS_KEY_ID: " + process.env.AWS_ACCESS_KEY_ID);
 console.log("\nSECRET_ACCESS_KEY: " + process.env.AWS_SECRET_ACCESS_KEY);
 console.log("\nSESSION_TOKEN: " + process.env.AWS_SESSION_TOKEN);
 console.log("\nREGION: " + process.env.AWS_REGION + "\n");
+console.log("\nNEWS_API_KEY: " + process.env.NEWS_API_KEY + "\n");
 
 // Cloud Services Set-up
 // Create unique bucket name

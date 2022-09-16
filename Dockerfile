@@ -35,6 +35,7 @@ ENV AWS_ACCESS_KEY_ID no_id
 ENV AWS_SECRET_ACCESS_KEY no_secret
 ENV AWS_SESSION_TOKEN no_token
 ENV AWS_REGION ap-southeast-2
+ENV NEWS_API_KEY no_key_given
 
 # Set dir to project folder
 WORKDIR /fullstack

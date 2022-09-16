@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const axios = require("axios");
+require("dotenv").config();
 
 // Custom error type to have variable message and status code.
 class StatusError extends Error {
@@ -36,7 +37,7 @@ router.get("/", async (req, res) => {
     };
     const headers = {
       headers: {
-        "x-api-key": "690hLW9I6UfxS4vRnrRFWN_x-4HsrobrfW-xbFuwsSo",
+        "x-api-key": process.env.NEWS_API_KEY,
       },
     };
 
