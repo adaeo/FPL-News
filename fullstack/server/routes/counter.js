@@ -51,10 +51,10 @@ router.get("/", async (req, res) => {
     try {
       if (err.statusCode === 404) {
         const s3Key = `mashupCounter`;
-        const s3Body = JSON.stringify({counter: 0});
+        const s3Body = JSON.stringify({counter: 1});
         const objParams = { Bucket: bucketName, Key: s3Key, Body: s3Body };
         await s3.putObject(objParams).promise();
-        res.status(200).json({message: "added counter obj"});
+        res.status(200).json({msg: "added counter obj", count: 1});
         return;
       }
       console.log(err);
